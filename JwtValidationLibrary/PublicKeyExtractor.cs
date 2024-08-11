@@ -1,20 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
-using Nest;
+using System.Security.Cryptography.X509Certificates;
 
 namespace JwtValidationLibrary
 {
+    /// <summary>
+    /// A classe <c>PublicKeyExtractor</c> é responsável por extrair a chave pública de um certificado incorporado ao assembly.
+    /// </summary>
     public static class PublicKeyExtractor
     {
         private const string CertResourceName = "JwtValidationLibrary.Resources.MyCertificate.crt";
 
+        /// <summary>
+        /// Extrai a chave pública de um certificado X.509 incorporado ao assembly.
+        /// </summary>
+        /// <param name="token">O token JWT associado à operação de extração.</param>
+        /// <param name="userid">O identificador do usuário associado à operação.</param>
+        /// <param name="entityid">O identificador da entidade associado à operação.</param>
+        /// <returns>Retorna a chave pública extraída do certificado.</returns>
+        /// <exception cref="InvalidOperationException">Lançada quando o recurso do certificado não é encontrado no assembly.</exception>
         public static RSA ExtractPublicKeyFromCert(string token, string userid, string entityid)
         {
             var stopwatch = Stopwatch.StartNew();
@@ -40,13 +45,22 @@ namespace JwtValidationLibrary
                 Logger.LogError("Failed to extract public key from certificate.", ex, stopwatch, token, userid, entityid);
                 throw; // Rethrow the exception after logging
             }
-            finally 
-            { 
-                stopwatch.Stop(); 
+            finally
+            {
+                stopwatch.Stop();
             }
-            
+
         }
 
+        /// <summary>
+        /// Lê completamente um fluxo de dados (stream) e converte-o em um array de bytes.
+        /// </summary>
+        /// <param name="input">O fluxo de dados a ser lido.</param>
+        /// <param name="token">O token JWT associado à operação de leitura.</param>
+        /// <param name="userid">O identificador do usuário associado à operação.</param>
+        /// <param name="entityid">O identificador da entidade associado à operação.</param>
+        /// <returns>Retorna o conteúdo do fluxo de dados como um array de bytes.</returns>
+        /// <exception cref="Exception">Lançada quando ocorre um erro durante a leitura do fluxo de dados.</exception>
         private static byte[] ReadStreamFully(System.IO.Stream input, string token, string userid, string entityid)
         {
             var stopwatch = Stopwatch.StartNew();
@@ -68,7 +82,7 @@ namespace JwtValidationLibrary
             {
                 stopwatch.Stop();
             }
-            
+
         }
     }
 }
