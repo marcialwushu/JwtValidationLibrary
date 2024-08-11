@@ -4,6 +4,13 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>JwtValidateLibrary</Title>
+    <Description>JwtValidationLibrary é uma biblioteca em .NET projetada para validar JSON Web Tokens (JWT) de maneira segura e eficiente. A biblioteca oferece uma série de funcionalidades que permitem a validação de assinaturas, emissores, público-alvo, e claims de tokens JWT utilizando chaves públicas extraídas de certificados incorporados no assembly. Além disso, a biblioteca inclui capacidades de logging estruturado, registrando informações detalhadas sobre o processo de validação e erros, com suporte para envio de logs ao ElasticSearch.</Description>
+    <Copyright>MIT</Copyright>
+    <PackageProjectUrl>https://github.com/marcialwushu/JwtValidationLibrary</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/marcialwushu/JwtValidationLibrary</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
