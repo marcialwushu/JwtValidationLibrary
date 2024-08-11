@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtValidationLibrary", "JwtValidationLibrary\JwtValidationLibrary.csproj", "{B7848C09-90C5-474B-ACBA-1062A4BA3699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtValidationConsole", "JwtValidationConsole\JwtValidationConsole.csproj", "{BC020BF4-5B68-4045-9D8E-45BC72EB94A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7848C09-90C5-474B-ACBA-1062A4BA3699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7848C09-90C5-474B-ACBA-1062A4BA3699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7848C09-90C5-474B-ACBA-1062A4BA3699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7848C09-90C5-474B-ACBA-1062A4BA3699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC020BF4-5B68-4045-9D8E-45BC72EB94A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC020BF4-5B68-4045-9D8E-45BC72EB94A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC020BF4-5B68-4045-9D8E-45BC72EB94A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC020BF4-5B68-4045-9D8E-45BC72EB94A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73A47271-4824-4D81-B5EA-F745123B6B43}
+	EndGlobalSection
+EndGlobal
